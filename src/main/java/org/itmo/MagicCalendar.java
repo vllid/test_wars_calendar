@@ -32,7 +32,7 @@ public class MagicCalendar {
 
             var userMeetings = meetings.keySet().stream().filter(k -> k.getValue().equals(user)).count();
 
-            if (userMeetings <= 5) {
+            if (userMeetings < 5) {
                 if (meetings.keySet().stream().anyMatch(m ->
                         m.getKey() >= sumMinutes && m.getKey() < (sumMinutes + 60) && m.getValue().equals(user))) {
 
